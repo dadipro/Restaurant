@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap");
+
+:root {
+  --font-family-playfair: "Playfair Display", serif;
+  --font-family-open: "Open Sans", sans-serif;
+  --gray: #6c757d;
+  --orange: #fd7e14;
+}
+
+.successful-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 3%;
+  left: 15%;
+  z-index: 1;
+  width: 70%;
+
+  .closed-modal {
+    position: fixed;
+    top: 2%;
+    border: 1px solid;
+    background-color: white;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .successful-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .title {
+        font-family: var(--font-family-playfair);
+        font-size: 20px;
+      }
+
+      .close-btn {
+        position: absolute;
+        left: 85%;
+
+        button {
+          border: none;
+          background-color: transparent;
+          font-size: 20px;
+          padding: 10px;
+          transition: 0.5s ease;
+        }
+
+        button:hover {
+          background-color: rgba(128, 128, 128, 0.329);
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+    }
+    .successful-reservation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 100px;
+
+      .reservation-details {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: center;
+        span {
+          display: flex;
+          font-family: var(--font-family-playfair);
+          font-size: 20px;
+          border-bottom: 1px solid;
+        }
+      }
+    }
+
+    .successful-thank {
+      margin-top: 50px;
+      font-family: var(--font-family-open);
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .successful-container {
+    .closed-modal {
+      position: fixed;
+      top: 5%;
+      left: 3.5%;
+      width: 70%;
+      .successful-title {
+        .title {
+          text-align: center;
+        }
+
+        .close-btn {
+          top: 0%;
+          left: 90%;
+        }
+      }
+
+      .successful-reservation {
+        .reservation-details {
+        }
+      }
+
+      .successful-thank {
+        .text {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .successful-container {
+    .closed-modal {
+      position: fixed;
+      top: 5%;
+      left: 10%;
+
+      .successful-title {
+        .title {
+        }
+
+        .close-btn {
+        }
+      }
+
+      .successful-reservation {
+        .reservation-details {
+        }
+
+        .successful-thank {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .successful-container {
+    .closed-modal {
+      position: fixed;
+      top: 0%;
+      left: 15%;
+      .successful-title {
+        .title {
+        }
+
+        .close-btn {
+        }
+      }
+
+      .successful-reservation {
+        .reservation-details {
+        }
+
+        .successful-thank {
+          .text {
+          }
+        }
+      }
+    }
+  }
+}

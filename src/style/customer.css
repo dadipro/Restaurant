@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap");
+
+:root {
+  --font-family-playfair: "Playfair Display", serif;
+  --font-family-open: "Open Sans", sans-serif;
+  --gray: #6c757d;
+  --orange: #fd7e14;
+}
+
+.customer-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  .customer-title {
+    font-family: var(--font-family-playfair);
+    font-size: 30px;
+  }
+
+  .customer-review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    .fetching-customers {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+
+      p {
+        font-size: 20px;
+        font-family: var(--font-family-open);
+        width: 700px;
+        margin-left: 50px;
+      }
+
+      span {
+        font-family: var(--font-family-open);
+      }
+    }
+  }
+
+  .customer-buttons {
+    .innerTab {
+      background-color: var(--orange);
+      border-radius: 100%;
+      width: 10px;
+      height: 10px;
+      border: none;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .innerTab.active {
+      width: 20px;
+      height: 20px;
+      background-color: var(--orange);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .customer-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .customer-title {
+      text-align: center;
+    }
+    .customer-review {
+      .fetching-customers {
+        p{
+          width: 90%;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .customer-details {
+    .customer-title {
+    }
+    .customer-review {
+      .fetching-customers {
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .customer-details {
+    .customer-title {
+    }
+    .customer-review {
+      .fetching-customers {
+      }
+    }
+  }
+}

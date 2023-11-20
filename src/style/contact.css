@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap");
+
+:root {
+  --font-family-playfair: "Playfair Display", serif;
+  --font-family-open: "Open Sans", sans-serif;
+  --gray: #6c757d;
+  --orange: #fd7e14;
+}
+
+.getInTouch-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(173, 202, 230, 0.158);
+
+  .getInTouch-title {
+    h1 {
+      font-family: var(--font-family-playfair);
+      font-size: 40px;
+    }
+  }
+
+  .getInTouch-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 100px;
+
+    .first-inputs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin: 50px;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        span {
+          font-family: var(--font-family-playfair);
+          font-size: 20px;
+          color: gray;
+        }
+
+        input {
+          width: 250px;
+          height: 30px;
+          border: 2px solid rgba(128, 128, 128, 0.171);
+          outline: none;
+          transition: 0.5s ease;
+        }
+
+        input:hover {
+          border: 2px solid var(--orange);
+        }
+
+        input:focus {
+          border: 2px solid var(--orange);
+        }
+      }
+    }
+
+    .second-Input {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .second-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          span {
+            font-family: var(--font-family-playfair);
+            font-size: 20px;
+            color: gray;
+          }
+
+          input {
+            width: 810px;
+            height: 150px;
+            border: 2px solid rgba(128, 128, 128, 0.171);
+            outline: none;
+            transition: 0.5s ease;
+          }
+
+          input:hover {
+            border: 2px solid var(--orange);
+          }
+
+          input:focus {
+            border: 2px solid var(--orange);
+          }
+        }
+      }
+    }
+
+    .contact-button {
+      margin: 100px;
+
+      .message {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+        border: 2px solid var(--orange);
+        background-color: transparent;
+        color: var(--orange);
+        transition: 0.5s ease;
+      }
+
+      .message:hover {
+        border: 2px solid var(--orange);
+        background-color: var(--orange);
+        color: black;
+      }
+    }
+  }
+}
+
+.getInTouch-iframe {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  iframe {
+    width: 100%;
+    height: 450px;
+    border: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .getInTouch-details {
+    .getInTouch-title {
+    }
+
+    .getInTouch-inputs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .first-inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .second-Input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .second-details {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          div {
+            input {
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .getInTouch-details {
+    .getInTouch-title {
+    }
+
+    .getInTouch-inputs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .first-inputs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div {
+          input {
+            width: 200px;
+          }
+        }
+      }
+
+      .second-Input {
+        .second-details {
+          div {
+            input {
+              width: 660px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .getInTouch-details {
+    .getInTouch-title {
+    }
+
+    .getInTouch-inputs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .first-inputs {
+        div {
+          input {
+            width: 250px;
+          }
+        }
+      }
+
+      .second-Input {
+        .second-details {
+          div {
+            input {
+              width: 810px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

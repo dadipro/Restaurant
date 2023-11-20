@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap");
+
+:root {
+  --font-family-playfair: "Playfair Display", serif;
+  --font-family-open: "Open Sans", sans-serif;
+  --gray: #6c757d;
+  --orange: #fd7e14;
+}
+
+.service-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .service-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    .service-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        font-size: 50px;
+        font-family: var(--font-family-playfair);
+      }
+
+      p {
+        font-size: 20px;
+        font-family: var(--font-family-open);
+      }
+    }
+
+    .all-services {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .first-service {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 50px;
+
+        h3 {
+          font-size: 20px;
+          font-family: var(--font-family-playfair);
+        }
+
+        p {
+          font-size: 20px;
+          font-family: var(--font-family-open);
+          width: 500px;
+        }
+      }
+    }
+
+    .service-details-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .second-service {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 50px;
+
+        h3 {
+          font-size: 20px;
+          font-family: var(--font-family-playfair);
+        }
+
+        p {
+          font-size: 20px;
+          font-family: var(--font-family-open);
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+
+/* Base styles for small screens (up to 767px) */
+@media (max-width: 767px) {
+  .service-details {
+    .service-flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+
+      .service-title {
+        text-align: center;
+      }
+
+      .all-services {
+        .first-service {
+          display: inline;
+          p {
+            width: 100%;
+          }
+        }
+
+        .service-details-2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .second-service {
+            display: inline;
+            margin: 0px auto;
+            width: 100%;
+
+            p {
+              width: 95%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Styles for medium-sized screens (768px and larger) */
+@media (min-width: 768px) {
+  .service-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .service-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .service-title {
+        p {
+          width: 70%;
+          text-align: center;
+        }
+      }
+
+      .all-services {
+        .first-service {
+          display: inline;
+
+          p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        .service-details-2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .second-service {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Styles for large screens (1200px and larger) */
+@media (min-width: 1200px) {
+  .service-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .service-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .service-title {
+      }
+
+      .all-services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        .first-service {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          gap: 50px;
+
+          h3,
+          p {
+            width: 90%;
+          }
+        }
+
+        .service-details-2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .second-service {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 70px;
+
+            h3,
+            p {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

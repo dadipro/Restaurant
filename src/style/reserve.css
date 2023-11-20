@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap");
+
+:root {
+  --font-family-playfair: "Playfair Display", serif;
+  --font-family-open: "Open Sans", sans-serif;
+  --gray: #6c757d;
+  --orange: #fd7e14;
+}
+
+.reservation {
+  background-color: rgba(173, 202, 230, 0.158);
+  margin-top: 100px;
+  margin-bottom: 100px;
+  .reservation-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .reservation-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0px auto;
+
+      h1 {
+        font-family: var(--font-family-playfair);
+        font-size: 40px;
+      }
+
+      p {
+        font-family: var(--font-family-open);
+        font-size: 20px;
+      }
+    }
+
+    .sub-reservation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        font-family: var(--font-family-playfair);
+        font-size: 25px;
+      }
+
+      p:first-of-type {
+        width: 1020px;
+      }
+    }
+
+    .input-reservation {
+      background-color: white;
+      margin: 100px 100px;
+
+      .first-inputs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        width: auto;
+        margin-top: 20px;
+        .input1 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .input-details {
+            gap: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div {
+              display: flex;
+              flex-direction: column;
+
+              input {
+                width: 300px;
+                height: 35px;
+                font-size: 20px;
+                border: 2px solid rgba(128, 128, 128, 0.171);
+                color: gray;
+                outline: none;
+                transition: 0.5s ease;
+                cursor: pointer;
+              }
+
+              input:hover {
+                border: 2px solid var(--orange);
+              }
+
+              input:focus {
+                border: 2px solid var(--orange);
+              }
+
+              span {
+                font-family: var(--font-family-playfair);
+                font-size: 20px;
+                color: gray;
+                margin-bottom: 15px;
+              }
+            }
+          }
+        }
+      }
+
+      .second-input {
+        .second-details {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .input2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            div {
+              display: flex;
+              flex-direction: column;
+
+              input {
+                width: 300px;
+                height: 35px;
+                font-size: 20px;
+                border: 2px solid rgba(128, 128, 128, 0.171);
+                color: gray;
+                outline: none;
+                transition: 0.5s ease;
+                cursor: pointer;
+              }
+
+              input:hover {
+                border: 2px solid var(--orange);
+              }
+
+              input:focus {
+                border: 2px solid var(--orange);
+              }
+
+              span {
+                font-family: var(--font-family-playfair);
+                font-size: 20px;
+                color: gray;
+                margin-bottom: 15px;
+              }
+            }
+          }
+        }
+      }
+      .click-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: transparent;
+          color: var(--orange);
+          border: 2px solid var(--orange);
+          width: 200px;
+          height: 40px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: 0.5s ease;
+          border-radius: 3%;
+        }
+        :hover {
+          background-color: var(--orange);
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.successful-modal {
+  position: fixed;
+  top: 2%;
+  left: 1%;
+  width: 100%;
+  z-index: 1;
+
+  .inner-successful {
+  }
+}
+
+.message-modal {
+  position: fixed;
+  top: 2%;
+  left: 1%;
+  z-index: 1;
+}
+
+/* Base styles for small screens (up to 767px) */
+@media (max-width: 767px) {
+  .reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .reservation-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .reservation-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+        }
+
+        p {
+          width: 50%;
+          text-align: center;
+        }
+
+        .sub-reservation {
+          h3 {
+          }
+
+          p {
+            width: 50%;
+          }
+        }
+      }
+
+      .input-reservation {
+        .first-inputs {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .input1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .input-details {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+
+        .second-input {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .second-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .input2 {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+
+        .click-btn {
+        }
+      }
+    }
+  }
+
+  .successful-modal {
+    .inner-successful {
+    }
+  }
+
+  .message-modal {
+    .inner-message {
+    }
+  }
+}
+
+/* Styles for medium-sized screens (768px and larger) */
+@media (min-width: 768px) {
+  .reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .reservation-details {
+      .reservation-title {
+        h1 {
+        }
+
+        p {
+        }
+
+        .sub-reservation {
+          h3 {
+          }
+
+          p {
+            width: 50%;
+            text-align: center;
+          }
+        }
+      }
+
+      .input-reservation {
+        .first-inputs {
+          .input1 {
+            .input-details {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              div {
+                input {
+                  width: 200px;
+                }
+              }
+            }
+          }
+        }
+
+        .second-input {
+          .second-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .input2 {
+              div {
+                input {
+                  width: 200px;
+                }
+              }
+            }
+          }
+        }
+
+        .click-btn {
+        }
+      }
+    }
+  }
+
+  .successful-modal {
+    .inner-successful {
+    }
+  }
+
+  .message-modal {
+    .inner-message {
+    }
+  }
+}
+
+/* Styles for large screens (1200px and larger) */
+@media (min-width: 1200px) {
+  .reservation {
+    .reservation-details {
+      .reservation-title {
+        h1 {
+        }
+
+        p {
+        }
+
+        .sub-reservation {
+          h3 {
+          }
+
+          p {
+          }
+        }
+      }
+
+      .input-reservation {
+        .first-inputs {
+          .input1 {
+            .input-details {
+              div {
+                input {
+                  width: 300px;
+                }
+              }
+            }
+          }
+        }
+
+        .second-input {
+          .second-details {
+            .input2 {
+              div {
+                input {
+                  width: 300px;
+                }
+              }
+            }
+          }
+        }
+
+        .click-btn {
+        }
+      }
+    }
+  }
+
+  .successful-modal {
+    .inner-successful {
+    }
+  }
+
+  .message-modal {
+    .inner-message {
+    }
+  }
+}
